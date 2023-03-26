@@ -8,15 +8,17 @@ https://zenodo.org/record/7711478#.ZB7UHS9XZAd
 
 ## Daten
 
-Das verwendete Korpus enthält 1147 Romane. Es basiert auf den Sammlungen des Projekts Gutenberg und TextGrid. Die Datei "metadata.csv" enthält Metadaten zu den untersuchten Romanen. Der Ordner "corpus_info_plots" enthält Grafiken, die die Zusammensetzung des Korpus zeigen. Die 31 Listen von Wörtern wurden auf Basis von Germanet erstellt und mit einem Fasttext-Modell erweitert. Diese Daten können hier nicht zur Verfügung gestellt werden. Die ermittelten Worthäufigkeiten und die Metadaten liegen jedoch in der Datei "xyz" bereit.
+Das verwendete Korpus enthält 1147 Romane. Es basiert auf den Sammlungen des Projekts Gutenberg und TextGrid. Die Datei "metadata.csv" enthält Metadaten zu den untersuchten Romanen. Der Ordner "corpus_info_plots" enthält Grafiken, die die Zusammensetzung des Korpus zeigen. Die 34 Listen von Wörtern wurden auf Basis von Germanet erstellt und mit einem Fasttext-Modell erweitert. Diese Daten können hier nicht zur Verfügung gestellt werden. Die ermittelten Worthäufigkeiten und die Metadaten liegen jedoch in der Datei "xyz" bereit.
 
 ## Notebooks
 
 ### corpus_info.ipynb
 
-Das Notebook "corpus_info.ipynb" erstellt verschiedene Grafiken, die über die Zusammensetzung des Korpus informieren sollen. Die dabei erzeugten Grafiken finden sich im Ordner "corpus_info_plots".
+Das Notebook "corpus_info.ipynb" erstellt auf Basis der metadaten Grafiken, die über die Zusammensetzung des Korpus informieren sollen. Die dabei erzeugten Grafiken finden sich im Ordner "corpus_info_plots".
 
 ### count_word_frequencies.ipynb
+
+[Da das lemmatisierte Korpus und die Wortlisten hier nicht zur Verfügung steht, ist das Notebook so nicht ausführbar. Um transparent zu machen, wie die Worthäufigkeiten gezählt wurden steht es trotzdem hier bereit.]
 
 Das Notebook "count_word_frequencies.ipynb" liest das im preprocessing mit spacy lemmatisierte Roman-Korpus sowie die zuvor erstellten Listen von Wörtern verschiedener Wortfelder ein.
 
@@ -39,6 +41,20 @@ Der Ordner "results" enthält:
 - eine csv-Datei, die die Anteile der Wörter der untersuchten Wortfelder pro Roman anzeigt
 - eine csv-Datei, die die auf Basis des Datensatzes von Sabine Schulte im Walde und Maximilian Köper errechneten Konkretheitswerte für jeden Roman enthält
 - eine csv-Datei, die Wortfeld-Anteile und Konkretheitswerte unter Berücksichtigung des Redewiedergabe-Typs enthält.
+
+
+# Pakete
+
+Folgende Pakete wurden zum Ausführen der Notebooks in der angegebenen Version verwendet:
+
+- pandas==1.5.2
+- tqdm==4.64.1
+- re==2.2.1
+- plotly==5.9.0
+- glob
+- collections
+- pathlib
+- pymannkendall
 
 
 
