@@ -37,6 +37,14 @@ Das Notebook liest den zuvor heruntergeladenen Datensatz sowie das zuvor mit spa
 
 Das Notebook "visualisierung.ipynb" dient dazu, die in den Notebooks "count_concreteness_scores.ipynb" und "count_word_frequencies.ipynb" errechneten Werte zu visualisieren. Die erzeugten Grafiken werden jeweils im Ordner "figures" bzw. dessen Unterordnern abgelegt.
 
+### mannkendall.ipynb
+
+Das Notebook "mannkendall.ipynb" führt für die in den Notebooks "count_concreteness_scores.ipynb" und "count_word_frequencies.ipynb" errechneten Werte einen statistischen Signifikanztest für Zeitreihen durch. Dafür wird die Implementierung des Python-Mann-Kendall-Tests des Pakets "pymannkendall" benutzt. Die Ergebnisse sind direkt im Notebook einsehbar.
+
+## Figures
+
+Der Ordner "figures" und seine Unterordner enthalten die in den Notebooks "visualisierung.ipynb" und "corpus_info.ipynb" erzeugten Grafiken.
+
 Folgende Grundtypen gibt es:
 
 - Scatterplots, in denen jeder Punkt einen Roman repräsentiert. In der Regel zeigt die x-Achse hier das Erscheinungsjahr des Romans (außer in den beiden Grafiken, in denen die Anteile abstrakter gegen die Anteile konkreter Wörter geplottet werden ("abstrakt_vs_konkret")). Die y-Achse zeigt die Anteile der untersuchten konkreten bzw. abstrakten Wörter an den Wörtern des jeweiligen Romans. In den Plots, die mit dem Zusatz "col_gender" versehen sind, sind die Punkte nach dem Geschlecht des Autors bzw. der Autorin eingefärbt. Im Unterordner "figures/colored_autoren" finden sich Scatterplots, die wiederum die Anteile konkreter Wörter visualisieren, dabei aber die Romane einiger bekannter Autor:innen farblich hervorheben.
@@ -44,14 +52,9 @@ Folgende Grundtypen gibt es:
 - Lineplots, die die Durchschnittswerte der jeweiligen Wortfeld-Anteile zeigen. Die graue Kurve im Hintergrund zeigt die tatsächliche Kurve, die farbige Kurve im Vordergrund ist geglättet. Im Hauptordner finden sich Abbildungen, die die Anteile konkreter und abstrakter Wörter insgesamt zeigen, sowie Abbildungen, in denen die Kurven der Anteile verschiedener Wortfelder übereinanderliegen. Im Unterordner "figures/lineplots_einzelne_wortfelder" finden sich die Abbildungen zu allen einzelnen untersuchten Wortfeldern.
 - im Unterordner "figures/redewiedergabe" finden sich weitere Grafiken derselben Typen, die sich jeodch nicht auf den Romantext insgesamt beziehen, sondern die mit dem Redewiedergabe-Tagger annotierten Redewiedergabe-Typen berücksichtigen. 
 - Die Abbildung "scatterplot_konkretheitswerte.png" zeigt die auf Basis des Datensatzes von Köper/Schulte im Walde berechneten Konkretheitswerte (s. count_concreteness_scores.ipynb)
+- Der Unterordner "figures/corpus_info" enthält Histogramme, die die Zusammensetzung des Korpus’ zeigen sollen.
 
-
-### mannkendall.ipynb
-
-Das Notebook "mannkendall.ipynb" führt für die in den Notebooks "count_concreteness_scores.ipynb" und "count_word_frequencies.ipynb" errechneten Werte einen statistischen Signifikanztest für Zeitreihen durch. Dafür wird die Implementierung des Python-Mann-Kendall-Tests des Pakets "pymannkendall" benutzt. Die Ergebnisse sind direkt im Notebook einsehbar.
-
-
-## Results
+## Data
 
 Der Ordner "data" enthält:
 
