@@ -1,13 +1,13 @@
 # masterarbeit
 
-Das Repository enthält Daten und Code, die ich im Rahmen meiner Masterarbeit 2022 erzeugt habe. Ziel der Arbeit war, in deutschsprachigen Romanen, die zwischen 1760 und 1920 erschienen sind die Entwicklung der relativen Häufigkeiten konkreter und abstrakter Wortfelder zu untersuchen.
+Das Repository enthält Daten und Code, die ich im Rahmen meiner Masterarbeit 2022 erzeugt habe. Ziel der Arbeit war, in deutschsprachigen Romanen, die zwischen 1760 und 1920 erschienen sind, die Entwicklung der relativen Häufigkeiten konkreter und abstrakter Wortfelder zu untersuchen.
 
-Für einen kurzen Abriss von Fragestellung, Methodik, Korpus und Ergebnissen s. das folgende, auf der DHD2023 präsentierte Poster:
+Für einen kurzen Abriss von Fragestellung, Methodik, Korpus und Ergebnissen s. das folgende, auf der DHd2023 präsentierte Poster:
 https://zenodo.org/record/7711478#.ZB7UHS9XZAd
 
 ## Daten
 
-Das verwendete Korpus enthält 1147 Romane. Es basiert auf den Sammlungen des Projekts Gutenberg und TextGrid. Die Datei "data/metadaten.csv" enthält Metadaten zu den untersuchten Romanen. Der Ordner "figures/corpus_info_plots" enthält Grafiken, die die Zusammensetzung des Korpus zeigen. Die 34 Listen von Wörtern wurden auf Basis von Germanet erstellt und mit einem Fasttext-Modell erweitert. Diese Daten können hier nicht zur Verfügung gestellt werden. Die Datei "data/wortfelder.csv" enthält lediglich eine Liste der berücksichtigten Wortfelder. 
+Das verwendete Korpus enthält 1147 Romane. Es basiert auf den Sammlungen des Projekts Gutenberg und TextGrid. Die Datei "data/metadaten.csv" enthält Metadaten zu den untersuchten Romanen. Der Ordner "figures/corpus_info_plots" enthält Grafiken, die die Zusammensetzung des Korpus zeigen. Die 34 Listen von Wörtern wurden auf Basis von Germanet erstellt und mit einem Fasttext-Modell erweitert. Diese Daten können hier nicht zur Verfügung gestellt werden. Die Datei "data/wortfelder.csv" enthält jedoch eine Liste der berücksichtigten Wortfelder.
 
 Die ermittelten Werte liegen jedoch in folgenden Dateien bereit:
 
