@@ -3,7 +3,7 @@
 Das Repository enthält Daten und Code, die ich im Rahmen meiner Masterarbeit 2022 erzeugt habe. Ziel der Arbeit war, in deutschsprachigen Romanen, die zwischen 1760 und 1920 erschienen sind, die Entwicklung der relativen Häufigkeiten konkreter und abstrakter Wortfelder zu untersuchen.
 
 Für einen kurzen Abriss von Fragestellung, Methodik, Korpus und Ergebnissen s. das folgende, auf der DHd2023 präsentierte Poster:
-https://zenodo.org/record/7711478#.ZB7UHS9XZAd bzw. das Konferenz-Abstract dazu: https://doi.org/10.5281/zenodo.7734501 (ab S. 386)
+https://doi.org/10.5281/zenodo.7711478 bzw. das Konferenz-Abstract dazu: https://doi.org/10.5281/zenodo.7734501 (ab S. 386)
 
 ## Daten
 
