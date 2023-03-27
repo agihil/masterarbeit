@@ -7,7 +7,7 @@ https://zenodo.org/record/7711478#.ZB7UHS9XZAd
 
 ## Daten
 
-Das verwendete Korpus enthält 1147 Romane. Es basiert auf den Sammlungen des Projekts Gutenberg und TextGrid. Die Datei "data/metadaten.csv" enthält Metadaten zu den untersuchten Romanen. Der Ordner "figures/corpus_info_plots" enthält Grafiken, die die Zusammensetzung des Korpus zeigen. Die 34 Listen von Wörtern wurden auf Basis von Germanet erstellt und mit einem Fasttext-Modell erweitert. Diese Daten können hier nicht zur Verfügung gestellt werden. 
+Das verwendete Korpus enthält 1147 Romane. Es basiert auf den Sammlungen des Projekts Gutenberg und TextGrid. Die Datei "data/metadaten.csv" enthält Metadaten zu den untersuchten Romanen. Der Ordner "figures/corpus_info_plots" enthält Grafiken, die die Zusammensetzung des Korpus zeigen. Die 34 Listen von Wörtern wurden auf Basis von Germanet erstellt und mit einem Fasttext-Modell erweitert. Diese Daten können hier nicht zur Verfügung gestellt werden. Die Datei "data/wortfelder.csv" enthält lediglich eine Liste der berücksichtigten Wortfelder. 
 
 Die ermittelten Werte liegen jedoch in folgenden Dateien bereit:
 
@@ -27,10 +27,6 @@ Folgende Grundtypen gibt es:
 - im Unterordner "figures/redewiedergabe" finden sich weitere Grafiken derselben Typen, die sich jeodch nicht auf den Romantext insgesamt beziehen, sondern die mit dem Redewiedergabe-Tagger annotierten Redewiedergabe-Typen berücksichtigen. 
 - Die Abbildung "scatterplot_konkretheitswerte.png" zeigt die auf Basis des Datensatzes von Köper/Schulte im Walde berechneten Konkretheitswerte (s. count_concreteness_scores.ipynb)
 - Der Unterordner "figures/corpus_info" enthält Histogramme, die die Zusammensetzung des Korpus’ zeigen sollen.
-
-## Data
-
-
 
 ## Notebooks
 
@@ -64,8 +60,13 @@ Das Notebook "visualisierung.ipynb" dient dazu, die in den Notebooks "count_conc
 
 Das Notebook "mannkendall.ipynb" führt für die in den Notebooks "count_concreteness_scores.ipynb" und "count_word_frequencies.ipynb" errechneten Werte einen statistischen Signifikanztest für Zeitreihen durch. Dafür wird die Implementierung des Python-Mann-Kendall-Tests des Pakets "pymannkendall" benutzt. Die Ergebnisse sind direkt im Notebook einsehbar.
 
+### annotate_texts.ipynb
 
-# Pakete
+Das Notebook "annotate_texts.ipynb" ermöglicht es, die bei der Analyse berücksichtigten Wörter in einzelnen Romanen zu annotieren, sodass diese bei einem Close Reading besonders beachtet werden können.
+
+Zunächst werden die Wortlisten eingelesen. Die Funktion "annotate_novel" benötigt drei Argumente: zwei Listen von Wörtern und den Pfad zu einer txt-Datei. Die txt-Datei mit dem Roman wird eingelesen, die Wörter der beiden Wortlisten werden mit markup-Versehen. Ausgegeben wird eine xml-Datei, in der der Text liegt, wobei die Wörter der ersten Wortliste durch Fettung, die der zweiten durch Kursivierung hervorgehoben sind.
+
+## Pakete
 
 Folgende Pakete wurden zum Ausführen der Notebooks in der angegebenen Version verwendet:
 
