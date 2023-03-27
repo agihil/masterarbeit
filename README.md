@@ -7,7 +7,30 @@ https://zenodo.org/record/7711478#.ZB7UHS9XZAd
 
 ## Daten
 
-Das verwendete Korpus enthält 1147 Romane. Es basiert auf den Sammlungen des Projekts Gutenberg und TextGrid. Die Datei "metadata.csv" enthält Metadaten zu den untersuchten Romanen. Der Ordner "figures/corpus_info_plots" enthält Grafiken, die die Zusammensetzung des Korpus zeigen. Die 34 Listen von Wörtern wurden auf Basis von Germanet erstellt und mit einem Fasttext-Modell erweitert. Diese Daten können hier nicht zur Verfügung gestellt werden. Die ermittelten Worthäufigkeiten liegen jedoch in der Datei "data/roman_corpus_word_frequencies.csv" bereit.
+Das verwendete Korpus enthält 1147 Romane. Es basiert auf den Sammlungen des Projekts Gutenberg und TextGrid. Die Datei "data/metadaten.csv" enthält Metadaten zu den untersuchten Romanen. Der Ordner "figures/corpus_info_plots" enthält Grafiken, die die Zusammensetzung des Korpus zeigen. Die 34 Listen von Wörtern wurden auf Basis von Germanet erstellt und mit einem Fasttext-Modell erweitert. Diese Daten können hier nicht zur Verfügung gestellt werden. 
+
+Die ermittelten Werte liegen jedoch in folgenden Dateien bereit:
+
+- eine csv-Datei, die die Anteile der Wörter der untersuchten Wortfelder pro Roman anzeigt ("data/roman_corpus_word_frequencies.csv", )
+- eine csv-Datei, die die auf Basis des Datensatzes von Sabine Schulte im Walde und Maximilian Köper errechneten Konkretheitswerte für jeden Roman enthält ("data/roman_corpus_AbstConc.csv")
+- eine csv-Datei, die Wortfeld-Anteile und Konkretheitswerte unter Berücksichtigung des Redewiedergabe-Typs enthält ("data/roman_korpus_word_frequencies_redewiedergabe.csv").
+
+## Figures
+
+Der Ordner "figures" und seine Unterordner enthalten die in den Notebooks "visualisierung.ipynb" und "corpus_info.ipynb" erzeugten Grafiken.
+
+Folgende Grundtypen gibt es:
+
+- Scatterplots, in denen jeder Punkt einen Roman repräsentiert. In der Regel zeigt die x-Achse hier das Erscheinungsjahr des Romans (außer in den beiden Grafiken, in denen die Anteile abstrakter gegen die Anteile konkreter Wörter geplottet werden ("abstrakt_vs_konkret")). Die y-Achse zeigt die Anteile der untersuchten konkreten bzw. abstrakten Wörter an den Wörtern des jeweiligen Romans. In den Plots, die mit dem Zusatz "col_gender" versehen sind, sind die Punkte nach dem Geschlecht des Autors bzw. der Autorin eingefärbt. Im Unterordner "figures/colored_autoren" finden sich Scatterplots, die wiederum die Anteile konkreter Wörter visualisieren, dabei aber die Romane einiger bekannter Autor:innen farblich hervorheben.
+- Scatterplots, in denen jeder Punkt einen Roman repräsentiert. Die x-Achse zeigt die Anteile konkreter Werte, die y-Achse die Anteile abstrakter Wörter am jeweiligen Roman. Die Scatterplots sind einmal nach Erscheinungsjahr, einmal nach Autor:innen-Geschlecht eingefärbt ("scatterplot_anteil_abstrakt_vs_konkret_col_year.png", "scatterplot_anteil_abstrakt_vs_konkret_col_gender.png")
+- Lineplots, die die Durchschnittswerte der jeweiligen Wortfeld-Anteile zeigen. Die graue Kurve im Hintergrund zeigt die tatsächliche Kurve, die farbige Kurve im Vordergrund ist geglättet. Im Hauptordner finden sich Abbildungen, die die Anteile konkreter und abstrakter Wörter insgesamt zeigen, sowie Abbildungen, in denen die Kurven der Anteile verschiedener Wortfelder übereinanderliegen. Im Unterordner "figures/lineplots_einzelne_wortfelder" finden sich die Abbildungen zu allen einzelnen untersuchten Wortfeldern.
+- im Unterordner "figures/redewiedergabe" finden sich weitere Grafiken derselben Typen, die sich jeodch nicht auf den Romantext insgesamt beziehen, sondern die mit dem Redewiedergabe-Tagger annotierten Redewiedergabe-Typen berücksichtigen. 
+- Die Abbildung "scatterplot_konkretheitswerte.png" zeigt die auf Basis des Datensatzes von Köper/Schulte im Walde berechneten Konkretheitswerte (s. count_concreteness_scores.ipynb)
+- Der Unterordner "figures/corpus_info" enthält Histogramme, die die Zusammensetzung des Korpus’ zeigen sollen.
+
+## Data
+
+
 
 ## Notebooks
 
@@ -40,28 +63,6 @@ Das Notebook "visualisierung.ipynb" dient dazu, die in den Notebooks "count_conc
 ### mannkendall.ipynb
 
 Das Notebook "mannkendall.ipynb" führt für die in den Notebooks "count_concreteness_scores.ipynb" und "count_word_frequencies.ipynb" errechneten Werte einen statistischen Signifikanztest für Zeitreihen durch. Dafür wird die Implementierung des Python-Mann-Kendall-Tests des Pakets "pymannkendall" benutzt. Die Ergebnisse sind direkt im Notebook einsehbar.
-
-## Figures
-
-Der Ordner "figures" und seine Unterordner enthalten die in den Notebooks "visualisierung.ipynb" und "corpus_info.ipynb" erzeugten Grafiken.
-
-Folgende Grundtypen gibt es:
-
-- Scatterplots, in denen jeder Punkt einen Roman repräsentiert. In der Regel zeigt die x-Achse hier das Erscheinungsjahr des Romans (außer in den beiden Grafiken, in denen die Anteile abstrakter gegen die Anteile konkreter Wörter geplottet werden ("abstrakt_vs_konkret")). Die y-Achse zeigt die Anteile der untersuchten konkreten bzw. abstrakten Wörter an den Wörtern des jeweiligen Romans. In den Plots, die mit dem Zusatz "col_gender" versehen sind, sind die Punkte nach dem Geschlecht des Autors bzw. der Autorin eingefärbt. Im Unterordner "figures/colored_autoren" finden sich Scatterplots, die wiederum die Anteile konkreter Wörter visualisieren, dabei aber die Romane einiger bekannter Autor:innen farblich hervorheben.
-- Scatterplots, in denen jeder Punkt einen Roman repräsentiert. Die x-Achse zeigt die Anteile konkreter Werte, die y-Achse die Anteile abstrakter Wörter am jeweiligen Roman. Die Scatterplots sind einmal nach Erscheinungsjahr, einmal nach Autor:innen-Geschlecht eingefärbt ("scatterplot_anteil_abstrakt_vs_konkret_col_year.png", "scatterplot_anteil_abstrakt_vs_konkret_col_gender.png")
-- Lineplots, die die Durchschnittswerte der jeweiligen Wortfeld-Anteile zeigen. Die graue Kurve im Hintergrund zeigt die tatsächliche Kurve, die farbige Kurve im Vordergrund ist geglättet. Im Hauptordner finden sich Abbildungen, die die Anteile konkreter und abstrakter Wörter insgesamt zeigen, sowie Abbildungen, in denen die Kurven der Anteile verschiedener Wortfelder übereinanderliegen. Im Unterordner "figures/lineplots_einzelne_wortfelder" finden sich die Abbildungen zu allen einzelnen untersuchten Wortfeldern.
-- im Unterordner "figures/redewiedergabe" finden sich weitere Grafiken derselben Typen, die sich jeodch nicht auf den Romantext insgesamt beziehen, sondern die mit dem Redewiedergabe-Tagger annotierten Redewiedergabe-Typen berücksichtigen. 
-- Die Abbildung "scatterplot_konkretheitswerte.png" zeigt die auf Basis des Datensatzes von Köper/Schulte im Walde berechneten Konkretheitswerte (s. count_concreteness_scores.ipynb)
-- Der Unterordner "figures/corpus_info" enthält Histogramme, die die Zusammensetzung des Korpus’ zeigen sollen.
-
-## Data
-
-Der Ordner "data" enthält:
-
-- Eine Datei mit den Metadaten der untersuchten Romane ("metadaten.csv")
-- eine csv-Datei, die die Anteile der Wörter der untersuchten Wortfelder pro Roman anzeigt ("roman_corpus_word_frequencies.csv", )
-- eine csv-Datei, die die auf Basis des Datensatzes von Sabine Schulte im Walde und Maximilian Köper errechneten Konkretheitswerte für jeden Roman enthält ("roman_corpus_AbstConc.csv")
-- eine csv-Datei, die Wortfeld-Anteile und Konkretheitswerte unter Berücksichtigung des Redewiedergabe-Typs enthält ("roman_korpus_word_frequencies_redewiedergabe.csv").
 
 
 # Pakete
