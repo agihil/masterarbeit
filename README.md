@@ -66,6 +66,12 @@ Das Notebook "annotate_texts.ipynb" ermöglicht es, die bei der Analyse berücks
 
 Zunächst werden die Wortlisten eingelesen. Die Funktion "annotate_novel" benötigt drei Argumente: zwei Listen von Wörtern und den Pfad zu einer txt-Datei. Die txt-Datei mit dem Roman wird eingelesen, die Wörter der beiden Wortlisten werden mit markup-Versehen. Ausgegeben wird eine xml-Datei, in der der Text liegt, wobei die Wörter der ersten Wortliste durch Fettung, die der zweiten durch Kursivierung hervorgehoben sind.
 
+## Playground
+
+Hier gibt es ein Colab-Notebook, in dem man ohne Programmierkenntnisse mit den Daten arbeiten kann. Vor allem dient es dazu, in den genannten Abbildungen die Romane bestimmter, selbst gewählter Autoren hervorzuheben, um sie im Sinne des "Scalable Reading" mit anderen Romanen vergleichen zu können:
+
+https://colab.research.google.com/drive/197H2y1iP1mK3e-Y8ICe6qESqzaJfhBEG?usp=sharing 
+
 ## Pakete
 
 Folgende Pakete wurden zum Ausführen der Notebooks in der angegebenen Version verwendet:
